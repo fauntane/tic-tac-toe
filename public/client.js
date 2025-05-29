@@ -1,4 +1,4 @@
-const socket = new WebSocket(`ws://${location.host}`);
+const socket = new WebSocket(`${location.protocol === "https:" ? "wss" : "ws"}://${location.host}`);
 const boardDiv = document.getElementById("board");
 const statusDiv = document.getElementById("status");
 const chatBox = document.getElementById("chat-box");
